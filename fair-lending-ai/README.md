@@ -37,17 +37,20 @@ This system is built as a portfolio project to demonstrate advanced skills in da
 ### It's highly recommended to use a virtual environment
 python -m venv venv
 source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
-
+```bash
 pip install -r requirements.txt
 
 
 ## Run the ETL pipeline
+```bash
 python src/pipeline.py
 
 ## Run the model training script
+```bash
 python src/train.py
 
 ## Launch the Web Application
+```bash
 streamlit run app/main.py
 
 ---
