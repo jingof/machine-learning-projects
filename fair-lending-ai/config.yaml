@@ -1,0 +1,39 @@
+columns:
+  - name: credit_score
+    type: customint
+    datatype: int
+    start: 530
+    end: 830
+    round: 1
+    pos: 1
+  - name: annual_income
+    type: customint
+    datatype: int
+    start: 100000
+    end: 200000
+    round: 5000
+    pos: 2
+  - name: loan_amount
+    type: customint
+    datatype: int
+    start: 30000
+    end: 60000
+    round: 2000
+    pos: 3
+  - name: loan_term_months
+    type: customint
+    datatype: int
+    start: 12
+    end: 72
+    round: 6
+    pos: 4
+  - name: race
+    type: customlist
+    datatype: string
+    values: ['GroupA', 'GroupB', 'GroupC', 'GroupD']
+    pos: 5
+  - name: loan_status
+    type: customlist
+    datatype: string
+    values: [0,1]
+    pos: 6
