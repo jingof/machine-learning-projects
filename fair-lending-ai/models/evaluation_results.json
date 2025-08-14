@@ -1,0 +1,24 @@
+{
+    "baseline": {
+        "accuracy": 0.5033719989209603,
+        "f1_score": 0.5047080979284368,
+        "demographic_parity_difference": 0.013018463413099535,
+        "approval_rates_by_group": {
+            "accuracy": {
+                "false": 0.4971056439942113,
+                "true": 0.5217391304347826
+            }
+        }
+    },
+    "mitigated": {
+        "accuracy": 0.5082276773671432,
+        "f1_score": 0.5050230790116753,
+        "demographic_parity_difference": 0.013018463413099535,
+        "approval_rates_by_group": {
+            "accuracy": {
+                "false": 0.5,
+                "true": 0.5323435843054083
+            }
+        }
+    }
+}
