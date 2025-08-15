@@ -10,6 +10,7 @@ class Config:
     BASE_DIR = Path(__file__).parent.parent
     DATA_DIR = BASE_DIR / "data"
     RAW_DATA_DIR = DATA_DIR / "raw"
+    SYSNTH_DIR = DATA_DIR/ "sysnthetic"
     PROCESSED_DATA_DIR = DATA_DIR / "processed"
     MODELS_DIR = BASE_DIR / "models"
     LOGS_DIR = BASE_DIR / "logs"
@@ -72,3 +73,7 @@ class Config:
         for directory in [cls.DATA_DIR, cls.RAW_DATA_DIR, cls.PROCESSED_DATA_DIR, 
                          cls.MODELS_DIR, cls.LOGS_DIR]:
             directory.mkdir(parents=True, exist_ok=True)
+
+
+if __name__ == "__main__":
+    config = Config()
