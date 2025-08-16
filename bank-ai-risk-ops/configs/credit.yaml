@@ -1,0 +1,11 @@
+pd_target: defaulted
+lgd_target: loss_ratio
+test_size: 0.2
+random_state: 42
+pd_model:
+  type: logistic_regression
+  params:
+    max_iter: 600
+lgd_model:
+  type: linear_regression
+  params: {}
