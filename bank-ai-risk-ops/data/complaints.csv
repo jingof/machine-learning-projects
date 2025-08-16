@@ -1,0 +1,25 @@
+complaint_id,customer_id,text,label
+C1-1694,1,App keeps crashing,other
+C1-3240,1,Escrow balance incorrect,mortgage
+C2-8220,2,Fee reversal request,fees
+C2-6662,2,Fee reversal request,fees
+C3-5602,3,Card not received,cards
+C3-7527,3,Wrong account on report,credit_reporting
+C3-5491,3,Customer support not responsive,other
+C4-1496,4,Declined at POS,cards
+C4-2463,4,Rate adjustment confusion,mortgage
+C5-9379,5,Card not received,cards
+C5-4510,5,I was charged an unexpected fee,fees
+C5-8844,5,Unauthorized transaction on my account,fraud
+C6-9674,6,Account takeover suspected,fraud
+C10-5308,10,Payment misapplied,mortgage
+C12-3940,12,Account takeover suspected,fraud
+C12-7603,12,Fee reversal request,fees
+C13-9099,13,Rate adjustment confusion,mortgage
+C13-9718,13,Limit was reduced suddenly,cards
+C14-5719,14,Customer support not responsive,other
+C14-1387,14,Card not received,cards
+C14-7296,14,Escrow balance incorrect,mortgage
+C16-5033,16,Payment misapplied,mortgage
+C16-3197,16,I was charged an unexpected fee,fees
+C16-2187,16,Incorrect delinquency on credit report,credit_reporting
