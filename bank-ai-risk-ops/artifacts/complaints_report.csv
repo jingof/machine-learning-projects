@@ -1,0 +1,5 @@
+,cards,credit_reporting,fees,fraud,mortgage,other,accuracy,macro avg,weighted avg
+precision,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+recall,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+f1-score,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0,1.0
+support,193.0,195.0,205.0,198.0,198.0,195.0,1.0,1184.0,1184.0
