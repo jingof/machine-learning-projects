@@ -1,8 +1,5 @@
-# BankAI RiskOps Suite
-
-
-```markdown
-# 🏦 BankAI RiskOps  
+# 🏦 BankAI RiskOps Suite
+ 
 **AI-Powered Risk Operations for Modern Banking**
 
 [![Python](https://img.shields.io/badge/python-3.9%2B-blue)](https://www.python.org/)   
