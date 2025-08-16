@@ -1,0 +1,8 @@
+target: label
+test_size: 0.2
+random_state: 42
+model:
+  type: logistic_regression
+  params:
+    max_iter: 600
+text_col: text
