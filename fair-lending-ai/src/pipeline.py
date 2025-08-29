@@ -26,18 +26,20 @@ def run_pipeline():
     df['income_to_loan_ratio'] = df['annual_income'] / df['loan_amount']
 
     # One-hot encode the 'race' column for modeling
-    df = pd.get_dummies(df, columns=['race'], prefix='race', drop_first=True)
-    
+    df = pd.get_dummies(df, columns=['race'], prefix='race')
+    print(df.columns)
     # Rename columns to be compatible with XGBoost
     df = df.rename(columns={"race_GroupB": "race_groupb"})
 
     print("Feature engineering complete.")
     print("Final columns:", df.columns.tolist())
+    print()
 
     # Save processed data
     output_file = processed_data_path / "processed_loan_data.parquet"
     df.to_parquet(output_file)
     print(f"Processed data saved to {output_file}")
+    print()
 
 if __name__ == "__main__":
     run_pipeline()

@@ -11,7 +11,7 @@ import matplotlib.pyplot as plt
 from pathlib import Path
 
 # Import the prediction function from our source code
-from src.predict import make_prediction
+from src.predict import make_prediction, predict_pipeline
 
 # --- Page Configuration ---
 st.set_page_config(
@@ -40,10 +40,11 @@ mitigated_results = results['mitigated']
 st.sidebar.title("Applicant Information")
 st.sidebar.header("Enter Applicant Details:")
 
-credit_score = st.sidebar.slider("Credit Score", 300, 850, 650)
+credit_score = st.sidebar.slider("Credit Score", 500, 850, 650)
 annual_income = st.sidebar.number_input("Annual Income ($)", min_value=15000, max_value=500000, value=60000, step=1000)
-loan_amount = st.sidebar.number_input("Loan Amount ($)", min_value=1000, max_value=100000, value=20000, step=500)
+loan_amount = st.sidebar.number_input("Loan Amount ($)", min_value=5000, max_value=100000, value=20000, step=500)
 loan_term_months = st.sidebar.selectbox("Loan Term (Months)", [24, 36, 48, 60], index=1)
+race_group = st.sidebar.selectbox("Race", ['GroupA', 'GroupB', 'GroupC', 'GroupD'], index=1)
 
 st.sidebar.header("Model Selection")
 use_mitigated = st.sidebar.checkbox("Use Bias Mitigated Model", value=True)
@@ -64,6 +65,7 @@ with col1:
         'annual_income': annual_income,
         'loan_amount': loan_amount,
         'loan_term_months': loan_term_months,
+        'race_group': race_group
     }
     
     if st.button("Get Prediction", type="primary"):
@@ -91,10 +93,9 @@ with col2:
         shap_explanation = shap.Explanation(
             values=pred_out['shap_values'],
             base_values=pred_out['base_value'],
-            data=pd.DataFrame([input_data])[pred_out['feature_names']],
+            data=predict_pipeline(input_data)[pred_out['feature_names']],
             feature_names=pred_out['feature_names']
         )
-        
         # Create SHAP Force Plot
         fig = shap.force_plot(
             base_value=shap_explanation.base_values,

@@ -28,7 +28,6 @@ def train_and_evaluate():
     model_path.mkdir(parents=True, exist_ok=True)
 
     df = pd.read_parquet(processed_data_path)
-
     # --- Data Splitting ---
     X = df.drop('loan_status', axis=1)
     y = df['loan_status']
@@ -38,6 +37,8 @@ def train_and_evaluate():
     X_train, X_test, y_train, y_test, sensitive_features_train, sensitive_features_test = train_test_split(
         X, y, sensitive_features, test_size=0.3, random_state=42, stratify=y
     )
+    print(X.columns)
+    joblib.dump(X.columns, model_path / "data_features.joblib")
     print(f"Data split into {len(X_train)} training and {len(X_test)} test samples.")
 
     # --- 1. Baseline Model (XGBoost) ---
