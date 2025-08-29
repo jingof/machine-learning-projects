@@ -43,7 +43,7 @@ st.sidebar.header("Enter Applicant Details:")
 credit_score = st.sidebar.slider("Credit Score", 500, 850, 650)
 annual_income = st.sidebar.number_input("Annual Income ($)", min_value=15000, max_value=500000, value=60000, step=1000)
 loan_amount = st.sidebar.number_input("Loan Amount ($)", min_value=5000, max_value=100000, value=20000, step=500)
-loan_term_months = st.sidebar.selectbox("Loan Term (Months)", [24, 36, 48, 60], index=1)
+loan_term_months = st.sidebar.selectbox("Loan Term (Months)", [12, 24, 36, 48, 60, 72], index=1)
 race_group = st.sidebar.selectbox("Race", ['GroupA', 'GroupB', 'GroupC', 'GroupD'], index=1)
 
 st.sidebar.header("Model Selection")

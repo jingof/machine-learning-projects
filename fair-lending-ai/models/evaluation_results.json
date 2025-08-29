@@ -1,23 +1,23 @@
 {
     "baseline": {
-        "accuracy": 0.4866666666666667,
-        "f1_score": 0.47260273972602745,
-        "demographic_parity_difference": 0.0256885593220339,
+        "accuracy": 0.921,
+        "f1_score": 0.7048567870485678,
+        "demographic_parity_difference": 0.014281470163823098,
         "approval_rates_by_group": {
             "accuracy": {
-                "false": 0.5127118644067796,
-                "true": 0.390625
+                "false": 0.9206773618538324,
+                "true": 0.921957671957672
             }
         }
     },
     "mitigated": {
-        "accuracy": 0.49333333333333335,
-        "f1_score": 0.4758620689655173,
-        "demographic_parity_difference": 0.0256885593220339,
+        "accuracy": 0.9233333333333333,
+        "f1_score": 0.7103274559193954,
+        "demographic_parity_difference": 0.014281470163823098,
         "approval_rates_by_group": {
             "accuracy": {
-                "false": 0.5169491525423728,
-                "true": 0.40625
+                "false": 0.9229055258467023,
+                "true": 0.9246031746031746
             }
         }
     }
