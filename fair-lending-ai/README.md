@@ -41,6 +41,11 @@ source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
 pip install -r requirements.txt
 ```
 
+## Generate Synthetic data (default - 5000)
+```bash
+python src/generate_synthetic_data.py
+```
+
 ## Run the ETL pipeline
 ```bash
 python src/pipeline.py
