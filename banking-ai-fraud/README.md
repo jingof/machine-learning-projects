@@ -146,7 +146,7 @@ banking_ai_system/
 ```bash
 # Clone the repository
 git clone https://github.com/jingof/machine-learning-projects/banking-ai-system.git
-cd banking-ai-system
+cd banking-ai-fraud
 
 # Create virtual environment
 python -m venv venv1
@@ -157,6 +157,9 @@ pip install -r requirements.txt
 ```
 
 ### 2. Generate Synthetic Data
+```
+
+```
 
 ```bash
 # Generate comprehensive banking datasets
@@ -167,8 +170,7 @@ python src/models/pipeline.py
 
 ```bash
 # Start the FastAPI server
-cd api
-python main.py
+python api/main.py
 
 # API will be available at http://localhost:8000
 # Interactive docs at http://localhost:8000/docs
